@@ -1,0 +1,18 @@
+version: "2"
+services:
+  app1:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+     - "8888:8888"
+    environment:
+      NAME: "app1"
+  app2:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+     - "8889:8888"
+    environment:
+      NAME: "app2"
