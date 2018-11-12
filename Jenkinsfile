@@ -8,12 +8,12 @@ pipeline {
             parallel {
                 stage('Build App1') {
                     steps {
-                        sh '/usr/local/bin/docker-compose -f docker/docker-compose.yml up -d app1'
+                        sh '/usr/bin/docker-compose -f docker/docker-compose.yml up -d app1'
                     }
                 }
                 stage('Build App2') {
                     steps {
-			sh '/usr/local/bin/docker-compose -f docker/docker-compose.yml up -d app2'
+			sh '/usr/bin/docker-compose -f docker/docker-compose.yml up -d app2'
                     }
                 }
             }
