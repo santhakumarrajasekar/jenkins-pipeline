@@ -1,7 +1,7 @@
 @Library('decomission')_
 
 pipeline {
-    agent { label 'docker' }
+    agent any
     stages {
 	stage('Build&Run') {
 	    failFast true
